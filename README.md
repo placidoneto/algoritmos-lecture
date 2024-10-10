@@ -23,11 +23,17 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 ## Agenda
 
-<a href="branch link"> Aula 1. Fundamentos</a>
 
-- Tópico 1
-- Tópico 2
-- Tópico 3
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture01-introducao"> Aula 1. Fundamentos</a>
+
+- Conceitos Básicos em C
+- Entrada e Saída de Dados
+- Leitura e Escrita de Dados
+- Compilação e Execução de Programas em C
+- Variáveis e Tipos de Dados
+- Expressões Aritméticas
+- Estruturas de Controle de Fluxo
+- Funções
 
 <a href="branch link">Aula 2. ---</a>
 
