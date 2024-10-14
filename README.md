@@ -35,6 +35,8 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 - Estruturas de Controle de Fluxo
 - Funções
 
+<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture01-introducao/lista1.md"> TP1 - *Trabalho Prático 1*</a>
+
 <a href="branch link">Aula 2. ---</a>
 
 - Tópico 1
