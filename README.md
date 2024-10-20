@@ -37,11 +37,16 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture01-introducao/lista1.md"> TP1 - *Trabalho Prático 1*</a>
 
-<a href="branch link">Aula 2. ---</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture02-controle-fluxo">Aula 2. Estruturas de Controle em C</a>
 
-- Tópico 1
-- Tópico 2
-- Tópico 3
+- IF
+- ELSE
+- SWITCH
+- WHILE
+- DO WHILE
+- FOR
+- BREAK
+- CONTINUE
   
 <a href="branch link">Aula 3. ---</a>
 
