@@ -47,6 +47,8 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 - FOR
 - BREAK
 - CONTINUE
+
+<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture02-controle-fluxo/lecture02/tp2.md"> TP2 - *Trabalho Prático 2*</a>
   
 <a href="branch link">Aula 3. ---</a>
 
