@@ -50,11 +50,10 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture02-controle-fluxo/lecture02/tp2.md"> TP2 - *Trabalho Prático 2*</a>
   
-<a href="branch link">Aula 3. ---</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture03-array-e-string">Aula 3. Array e String em C</a>
 
-- Tópico 1
-- Tópico 2
-- Tópico 3
+- Array
+- String
 
 <a href="branch link">Aula 4. ---</a>
 
