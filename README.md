@@ -236,7 +236,19 @@ Imagine outro exemplo de uso de strings em C, onde é necessário contar o núme
 int main (int argc, char **argv){
   int i,cont=0;
   char s[100];
-  scanf("%s",s);
+  char ss[100];
+  //ler string sem espaco
+  scanf("%s",s);   
+  //ler string com espaco
+  scanf("%[^\n]",ss);  
+  for (i = 0 ; s[i] != '\0' ; i++){
+    if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
+      cont++;
+    }
+  }
+  printf("A string tem %d vogais\n",cont);
+
+  count = 0;  
   for (i = 0 ; s[i] != '\0' ; i++){
     if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
       cont++;
