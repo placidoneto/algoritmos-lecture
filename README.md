@@ -249,8 +249,8 @@ int main (int argc, char **argv){
   printf("A string tem %d vogais\n",cont);
 
   count = 0;  
-  for (i = 0 ; s[i] != '\0' ; i++){
-    if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
+  for (i = 0 ; ss[i] != '\0' ; i++){
+    if(as[i]=='a' || ss[i]=='e' || ss[i]=='i' || ss[i]=='o' || ss[i]=='u'){
       cont++;
     }
   }
