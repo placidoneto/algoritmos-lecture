@@ -54,6 +54,7 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 - Array
 - String
+- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture03-array-e-string/lecture03/tp3.md"> TP3 - *Trabalho Prático 3*</a>
 
 <a href="branch link">Aula 4. ---</a>
 
