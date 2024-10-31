@@ -22,7 +22,7 @@ Praticar os conceitos de Array e String vistos em aula.
    
 2. Deseja-se publicar o número de acertos de cada aluno em uma prova em forma de testes. A prova consta de 10 questões, cada uma com cinco alternativas identificadas por A, B, C, D e E. Para isso são dados: (i) o cartão gabarito; (ii) o número de alunos da turma; (iii) o cartão de respostas para cada aluno, contendo o seu número e suas respostas. faça um programa em C para a correção automática das provas. O programa deverá ler o gabarito, o número de alunos e as respostas de cada aluno. Para cada aluno o programa deverá calcular o número de acertos e imprimir o número do aluno e o número de acertos.
 
-3.Tentando descobrir se um dado era viciado, um dono de cassino honesto o lançou n vezes. Dados os N (onde N é determinado como entrada do usuário) resultados dos lançamentos, determinar o número de ocorrências de cada face. 
+3. Tentando descobrir se um dado era viciado, um dono de cassino honesto o lançou n vezes. Dados os N (onde N é determinado como entrada do usuário) resultados dos lançamentos, determinar o número de ocorrências de cada face. 
 
 4. Dados dois strings (um contendo uma frase e outro contendo uma palavra), determine o número de vezes que a palavra ocorre na frase.
 ```
