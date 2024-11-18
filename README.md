@@ -63,8 +63,10 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 - Recursividade
 - Ponteiros
 - <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4.md"> TP4 - *Trabalho Prático 4*</a>
+
+- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4_resolvido.md"> Resolução TP4 </a>
   
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/lista/AtividadeFixacao.pdf"> *Atividade Fixação Ponteiro*</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/lista/AtividadeFixacao.pdf"> *Atividade Fixação Ponteiro*</a> 
 
 <a href="branch link">Aula 5. ---</a>
 
