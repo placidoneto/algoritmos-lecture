@@ -72,6 +72,7 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 - Notação Big(O)
 - Complexidade de Algoritmos
 
+<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-notacaoBigO/atividade-fixacao-bigO.md"> *Atividade Fixação Complexidade de Algoritmos*</a> 
 
 <a href="branch link">Aula 6. ---</a>
 
