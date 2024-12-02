@@ -267,3 +267,92 @@ A notação Big(O) é uma forma de descrever a complexidade de um algoritmo em r
 - Sedgewick, R., & Wayne, K. (2011). Algorithms. Addison-Wesley.
 
 - Skiena, S. S. (2008). The algorithm design manual. Springer Science & Business Media.
+
+
+## Trabalho Prático 4 
+
+### Questão 1
+
+Analise o algoritmo abaixo e determine a complexidade deste, justificando pela expressão de quantidade de operações:
+
+ ```c
+#include <stdio.h>
+
+int obter_primeiro_elemento(int lista[], int tamanho) {
+    return lista[0];
+}
+
+int main() {
+    int lista[] = {10, 20, 30, 40, 50};
+    int tamanho = sizeof(lista) / sizeof(lista[0]);
+    
+    printf("Primeiro elemento: %d\n", obter_primeiro_elemento(lista, tamanho));
+    
+    return 0;
+}
+```
+
+### Questão 2
+
+Considere o seguinte trecho de código em C, determine a sua complexidade, justificando pela expressão de quantidade de operações. Descreva também o que o algoritmo está realizando como função.
+
+```c
+#include <stdio.h>
+
+int busca_binaria(int arr[], int tamanho, int alvo) {
+    int inicio = 0;
+    int fim = tamanho - 1; 
+
+    while (inicio <= fim) {
+        int meio = inicio + (fim - inicio) / 2;
+        
+        if (arr[meio] == alvo)
+            return meio;
+        else if (arr[meio] < alvo)
+            inicio = meio + 1;
+        else
+            fim = meio - 1;
+    }
+
+    return -1; // Elemento não encontrado
+}
+
+int main() {
+    int arr[] = {2, 3, 4, 10, 40};
+    int tamanho = sizeof(arr) / sizeof(arr[0]);
+    int alvo = 10;
+    
+    int resultado = busca_binaria(arr, tamanho, alvo);
+    (resultado == -1) ? printf("Elemento não encontrado\n") : printf("Elemento encontrado no índice %d\n", resultado);
+    
+    return 0;
+}
+
+```
+
+  ### Questão 3
+
+ Considere o seguinte trecho de código em C, determine a sua complexidade, justificando pela expressão de quantidade de operações. Descreva também o que o algoritmo está realizando como função. 
+
+ ```c
+#include <stdio.h>
+
+int soma_elementos(int arr[], int tamanho) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += arr[i];
+    }
+    return soma;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int tamanho = sizeof(arr) / sizeof(arr[0]);
+    
+    int resultado = soma_elementos(arr, tamanho);
+    printf("A soma dos elementos é %d\n", resultado);
+    
+    return 0;
+}
+
+```
