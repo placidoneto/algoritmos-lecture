@@ -269,7 +269,7 @@ A notação Big(O) é uma forma de descrever a complexidade de um algoritmo em r
 - Skiena, S. S. (2008). The algorithm design manual. Springer Science & Business Media.
 
 
-## Trabalho Prático 4 
+## Trabalho Prático 5 
 
 ### Questão 1
 
@@ -356,3 +356,37 @@ int main() {
 }
 
 ```
+
+### Questão 4
+
+ Considere o seguinte trecho de código em C, determine a sua complexidade, justificando pela expressão de quantidade de operações. Descreva também o que o algoritmo está realizando como função.
+
+ ```c
+#include <stdio.h>
+
+void exemplo(int n) {
+    int i, j;
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf("%d %d\n", i, j);
+        }
+    }
+}
+ ```
+
+ ### Questão 5
+
+ Numa competição de programação, ganhava mais pontos o time que apresentasse o algoritmo mais eficiente para resolver o pior caso de um determinado problema. A complexidade assintótica (notação Big O) dos algoritmos elaborados está ilustrada na tabela abaixo.
+
+| Time            | Complexidade |
+|-----------------|--------------|
+| Lilas           | O(nˆ20)      |
+| Laranja         | O(n log n)   |
+| Azul            | O(1)         |
+| Amarelo         | O(nˆ3)       |
+| Bege            | O(2ˆn)       |
+
+ 
+Ordene os times considerando o mais eficiente e o menos eficiente justificando sua resposta.
+
+
