@@ -74,11 +74,10 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-notacaoBigO/atividade-fixacao-bigO.md"> *Atividade Fixação Complexidade de Algoritmos*</a> 
 
-<a href="branch link">Aula 6. ---</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-struct">Aula 6. Struct em C</a>
 
-- Tópico 1
-- Tópico 2
-- Tópico 3
+- Estrutura 
+- Tipo de Dados Complexos
 
 <a href="branch link">Aula 7. ---</a>
 
