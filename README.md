@@ -78,21 +78,4 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 - Estrutura 
 - Tipo de Dados Complexos
-
-<a href="branch link">Aula 7. ---</a>
-
-- Tópico 1
-- Tópico 2
-- Tópico 3
-
-<a href="branch link">Aula 8. ---</a>
-
-- Tópico 1
-- Tópico 2
-- Tópico 3
-
-<a href="branch link">Aula 9. ---</a>
-
-- Tópico 1
-- Tópico 2
-- Tópico 3
+<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
