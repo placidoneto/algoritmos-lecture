@@ -78,4 +78,4 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 - Estrutura 
 - Tipo de Dados Complexos
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
+- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
