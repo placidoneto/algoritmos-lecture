@@ -111,6 +111,18 @@ estoque. Em seguida, crie um produto e teste a função.
 
 5. Considerando o struct Ponto da questão anterior, escreva uma função que receba um 3 pontos e retorne o a area do triangulo formado pelos 3 pontos.
 
+A fórmula para calcular a área de um triângulo usando a formula do semiperímetro, temos:
+
+```math
+\text{Área} = \sqrt{p \cdot (p - a) \cdot (p - b) \cdot (p - c)} 
+```
+
+onde:
+- \( `p `\) é o semiperímetro do triângulo, calculado como `p = {a + b + c} / 2`
+- \( `a` \), \( `b` \) e \( `c` \) são os comprimentos dos lados do triângulo.
+ 
+
+
 ```c
 
   float areaTriangulo(struct Ponto p1, struct Ponto p2, struct Ponto p3) {
