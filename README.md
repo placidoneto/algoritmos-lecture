@@ -6,7 +6,7 @@
 - O trabalho pode ser feito em grupos de até 2 pessoas.
 - O trabalho deve ser enviado via github-classroom.
 - Os membros do grupo devem enviar (commit e push), cada um, pelo menos a metade das questões abaixo.
-- O link para o Assignment é: [Assignment Avaliação - 1o Bimestre] (https://classroom.github.com/a/p5Cq6abr).
+- O link para o Assignment é: [Assignment Avaliação - 1o Bimestre] (https://classroom.github.com/a/toLMf8C3).
 - O prazo de entrega é até o dia 12/12/2024 até às 12:00.
 - O nome das equipes deem ser: avalicacao-nomeSobrenome-nomeSobrenome.
 
