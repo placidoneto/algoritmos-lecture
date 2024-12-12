@@ -1,81 +1,129 @@
-<div  align="center">
-    <img width="400"
-        alt="Algoritmo Logo"
-        src="https://blog.growthinstitute.com/hs-fs/hubfs/%5BGI%5D%20blog%20post%20images/algorithms_1.png?width=800&name=algorithms_1.png"
-      />
-    <h1> Algoritmos </h1>
-</div>
+# Avalliação Final 1o Bimestre
 
-## Objetivo
+## Instruções
 
-Este repositório é destinado ao aprendizado dos conceitos do Algoritmos.
+- Não seguir alguma das regras na descrição desta atividade implicará em não correção da atividade.
+- O trabalho pode ser feito em grupos de até 2 pessoas.
+- O trabalho deve ser enviado via github-classroom.
+- Os membros do grupo devem enviar (commit e push), cada um, pelo menos a metade das questões abaixo.
+- O link para o Assignment é: [Assignment Avaliação - 1o Bimestre] (https://classroom.github.com/a/p5Cq6abr).
+- O prazo de entrega é até o dia 12/12/2024 até às 12:00.
+- O nome das equipes deem ser: avalicacao-nomeSobrenome-nomeSobrenome.
 
+## Questões
 
-## Metodologia
+1. Crie uma struct chamada Produto com os campos nome (string), preco (float) e quantidade
+(int). Escreva uma função que receba um ponteiro para um produto e atualize a quantidade em
+estoque. Em seguida, crie um produto e teste a função.
 
-O processo de aquisição dos conhecimentos deve ser realizado a partir do estudo de cada branch existente neste repositório.
+```c
+#include <stdio.h>
+  #include <string.h>
 
-Cada branch implementada marca um conjunto de conceitos que são aplicados em código e que vai sendo refatorado até aplicação de todo conteúdo visto na disciplina.
+  struct Produto {
+      char nome[50];
+      float preco;
+      int quantidade;
+  };
 
-## Pré-Requistos 
+  void atualizaEstoque(struct Produto *p, int qtd) {
+      ...
+  }
 
-- Conhecimento em [Programação de Computadores]()
-
-## Agenda
-
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture01-introducao"> Aula 1. Fundamentos</a>
-
-- Conceitos Básicos em C
-- Entrada e Saída de Dados
-- Leitura e Escrita de Dados
-- Compilação e Execução de Programas em C
-- Variáveis e Tipos de Dados
-- Expressões Aritméticas
-- Estruturas de Controle de Fluxo
-- Funções
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture01-introducao/lista1.md"> TP1 - *Trabalho Prático 1*</a>
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture02-controle-fluxo">Aula 2. Estruturas de Controle em C</a>
-
-- IF
-- ELSE
-- SWITCH
-- WHILE
-- DO WHILE
-- FOR
-- BREAK
-- CONTINUE
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture02-controle-fluxo/lecture02/tp2.md"> TP2 - *Trabalho Prático 2*</a>
+  int main() {
+      
+      struct Produto p;
+      // Restante da implementacao...
   
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture03-array-e-string">Aula 3. Array e String em C</a>
+      return 0;
+  }
+```
 
-- Array
-- String
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture03-array-e-string/lecture03/tp3.md"> TP3 - *Trabalho Prático 3*</a>
+2. Crie uma struct chamada Aluno com os campos nome (string), matricula (int), notas (vetor de 3 floats). Escreva uma função que receba um ponteiro para um aluno e retorne a média das notas. Em seguida, crie um aluno e teste a função.
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture04-matriz-funcoes-recursividade">Aula 4. Matrizes, Funções, Recursividade e Ponteiros</a>
+```c
+#include <stdio.h>
+  #include <string.h>
 
-- Matrizes
-- Funções
-- Recursividade
-- Ponteiros
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4.md"> TP4 - *Trabalho Prático 4*</a>
+  struct Aluno {
+      char nome[50];
+      int matricula;
+      float notas[3];
+  };
 
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4_resolvido.md"> Resolução TP4 </a>
+  float mediaNotas(struct Aluno *a) {
+      ...
+  }
+
+  int main() {
+      
+      struct Aluno a;
+      // Restante da implementacao...
   
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/lista/AtividadeFixacao.pdf"> *Atividade Fixação Ponteiro*</a> 
+      return 0;
+  }
+```
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-notacaoBigO">Aula 5. Notação Big(O) </a>
-- Notação Big(O)
-- Complexidade de Algoritmos
+3. Crie uma struct chamada Data com os campos dia, mes e ano (inteiros). Escreva uma função que receba duas datas e retorne 1 se a primeira data for anterior à segunda, 0 se forem iguais e -1 se a primeira data for posterior à segunda.
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-notacaoBigO/atividade-fixacao-bigO.md"> *Atividade Fixação Complexidade de Algoritmos*</a> 
+```c
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-struct">Aula 6. Struct em C</a>
+  struct Data {
+      int dia;
+      int mes;
+      int ano;
+  };
 
-- Estrutura 
-- Tipo de Dados Complexos
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
+  int comparaDatas(struct Data d1, struct Data d2) {
+      ...
+  }
+
+  int main() {
+      
+      struct Data d1, d2;
+      // Restante da implementacao...
+  
+      return 0;
+  }
+```
+
+4. Crie uma struct chamada Ponto com os campos x e y. Escreva uma função que calcule a distância entre dois pontos. Em seguida, crie dois pontos e teste a função.
+
+```c
+
+  struct Ponto {
+      float x;
+      float y;
+  };
+
+  float distancia(struct Ponto p1, struct Ponto p2) {
+      ...
+  }
+
+  int main() {
+      
+      struct Ponto p1, p2;
+      // Restante da implementacao...
+  
+      return 0;
+  }
+```
+
+5. Considerando o struct Ponto da questão anterior, escreva uma função que receba um 3 pontos e retorne o a area do triangulo formado pelos 3 pontos.
+
+```c
+
+  float areaTriangulo(struct Ponto p1, struct Ponto p2, struct Ponto p3) {
+      ...
+  }
+
+  int main() {
+      
+      struct Ponto p1, p2, p3;
+      // Restante da implementacao...
+  
+      return 0;
+  }
+```
+
+1. Para as 5 questões anteriores analise a complexidade de cada função, APRESENTE e EXPLIQUE, no `README.m` do seu repositório, a **(i) complexidade de cada função** junto com a **(ii) expressão de quantidade de operações**.
