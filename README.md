@@ -23,8 +23,9 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 ## Agenda
 
+### 1o Bimestre
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture01-introducao"> Aula 1. Fundamentos</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture01-introducao"> Conteúdo 1. Fundamentos</a>
 
 - Conceitos Básicos em C
 - Entrada e Saída de Dados
@@ -37,7 +38,7 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture01-introducao/lista1.md"> TP1 - *Trabalho Prático 1*</a>
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture02-controle-fluxo">Aula 2. Estruturas de Controle em C</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture02-controle-fluxo">Conteúdo 2. Estruturas de Controle em C</a>
 
 - IF
 - ELSE
@@ -50,13 +51,13 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture02-controle-fluxo/lecture02/tp2.md"> TP2 - *Trabalho Prático 2*</a>
   
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture03-array-e-string">Aula 3. Array e String em C</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture03-array-e-string">Conteúdo 3. Array e String em C</a>
 
 - Array
 - String
 - <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture03-array-e-string/lecture03/tp3.md"> TP3 - *Trabalho Prático 3*</a>
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture04-matriz-funcoes-recursividade">Aula 4. Matrizes, Funções, Recursividade e Ponteiros</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture04-matriz-funcoes-recursividade">Conteúdo 4. Matrizes, Funções, Recursividade e Ponteiros</a>
 
 - Matrizes
 - Funções
@@ -68,14 +69,22 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
   
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/lista/AtividadeFixacao.pdf"> *Atividade Fixação Ponteiro*</a> 
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-notacaoBigO">Aula 5. Notação Big(O) </a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-notacaoBigO">Conteúdo 5. Notação Big(O) </a>
 - Notação Big(O)
 - Complexidade de Algoritmos
 
 <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-notacaoBigO/atividade-fixacao-bigO.md"> *Atividade Fixação Complexidade de Algoritmos*</a> 
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-struct">Aula 6. Struct em C</a>
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-struct">Conteúdo 6. Struct em C</a>
 
 - Estrutura 
 - Tipo de Dados Complexos
 - <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
+
+### 2o Bimestre
+
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lista-ligada">Conteúdo 7. Lista Ligada</a>
+
+- Lista Ligada
+- Operações de Lista Ligada
+- Implementação de Lista Ligada
