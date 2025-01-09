@@ -83,6 +83,9 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 
 ### 2o Bimestre
 
+
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/projeto-2o-bimestre">Projeto 2o Bimestre</a>
+
 <a href="https://github.com/placidoneto/algoritmos-lecture/tree/lista-ligada">Conteúdo 7. Lista Ligada</a>
 
 - Lista Ligada
