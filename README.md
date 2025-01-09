@@ -1,81 +1,233 @@
-<div  align="center">
-    <img width="400"
-        alt="Algoritmo Logo"
-        src="https://blog.growthinstitute.com/hs-fs/hubfs/%5BGI%5D%20blog%20post%20images/algorithms_1.png?width=800&name=algorithms_1.png"
-      />
-    <h1> Algoritmos </h1>
-</div>
+# Lista Ligada
 
-## Objetivo
+## Definição
 
-Este repositório é destinado ao aprendizado dos conceitos do Algoritmos.
+Uma lista ligada é uma estrutura de dados que consiste em um conjunto de elementos, chamados de nós, que estão ligados uns aos outros por meio de ponteiros. Cada nó contém um valor e um ponteiro para o próximo nó da lista. O primeiro nó da lista é chamado de nó cabeça e o último nó é chamado de nó cauda. O ponteiro do último nó aponta para um endereço nulo.
+
+A lista é inicializada com um nó cabeça que aponta para o primeiro nó da lista. A lista é percorrida a partir do nó cabeça até o nó cauda.
+Como a lista não contém nenhum elemento no início, o nó cabeça é inicializado com um valor nulo.
 
 
-## Metodologia
+![Lista sem elementos](imagens/listaligada.png)
 
-O processo de aquisição dos conhecimentos deve ser realizado a partir do estudo de cada branch existente neste repositório.
+A calda da lista é o último nó da lista. O ponteiro do último nó aponta para um endereço nulo. Abaixo é mostrado um exemplo de uma lista ligada vazia.
 
-Cada branch implementada marca um conjunto de conceitos que são aplicados em código e que vai sendo refatorado até aplicação de todo conteúdo visto na disciplina.
+![Inserção](imagens/listavazia.png)
 
-## Pré-Requistos 
+Em C a lista ligada é implementada por meio de uma estrutura de dados. A estrutura de dados contém um campo para armazenar o valor do nó e um ponteiro para o próximo nó da lista.
 
-- Conhecimento em [Programação de Computadores]()
+```c
+struct Node {
+    int valor;
+    struct Node* proximo;
+};
+```
 
-## Agenda
+Uma vez feita a estrutura de dados, é possível criar uma lista ligada. A lista ligada é inicializada com um nó cabeça que aponta para o primeiro nó da lista. O nó cabeça é inicializado com um valor nulo.
+
+```c
+struct Node* inicio = NULL;
+```
+
+OBS: A lista ligada é uma estrutura de dados dinâmica, ou seja, o tamanho da lista pode ser alterado durante a execução do programa. É possivel também criar uma lista ligada como uma noava estrutura de dados. Dessa forma a Lista teria um campo para o nó cabeça e um campo para o nó cauda.
+
+vamos verificar essa estrutura no futuro, por enquanto vamos focar na estrutura de um nó.
 
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture01-introducao"> Aula 1. Fundamentos</a>
+## Operações Básicas
 
-- Conceitos Básicos em C
-- Entrada e Saída de Dados
-- Leitura e Escrita de Dados
-- Compilação e Execução de Programas em C
-- Variáveis e Tipos de Dados
-- Expressões Aritméticas
-- Estruturas de Controle de Fluxo
-- Funções
+As operações básicas de uma lista ligada são:
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture01-introducao/lista1.md"> TP1 - *Trabalho Prático 1*</a>
+- Inserção: Adiciona um novo nó à lista.
+- Remoção: Remove um nó da lista.
+- Busca: Procura um nó na lista.
+- Impressão: Imprime os elementos da lista.
+- Tamanho: Retorna o número de elementos da lista.
+- Vazia: Verifica se a lista está vazia.
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture02-controle-fluxo">Aula 2. Estruturas de Controle em C</a>
+### Inserção
 
-- IF
-- ELSE
-- SWITCH
-- WHILE
-- DO WHILE
-- FOR
-- BREAK
-- CONTINUE
+A operação de inserção adiciona um novo nó à lista. O novo nó é inserido no início da lista. O ponteiro do novo nó aponta para o nó cabeça e o ponteiro do nó cabeça aponta para o novo nó.
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture02-controle-fluxo/lecture02/tp2.md"> TP2 - *Trabalho Prático 2*</a>
-  
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture03-array-e-string">Aula 3. Array e String em C</a>
+![Inserção](imagens/insercao.png) 
 
-- Array
-- String
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture03-array-e-string/lecture03/tp3.md"> TP3 - *Trabalho Prático 3*</a>
+Para inserir mais um nó, o novo nó é inserido no início da lista. O ponteiro do novo nó aponta para o nó cabeça e o ponteiro do nó cabeça aponta para o novo nó.
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture04-matriz-funcoes-recursividade">Aula 4. Matrizes, Funções, Recursividade e Ponteiros</a>
+![Inserção](imagens/insercao2.png) 
 
-- Matrizes
-- Funções
-- Recursividade
-- Ponteiros
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4.md"> TP4 - *Trabalho Prático 4*</a>
+Para implementar uma inserção em uma lista ligada, é necessário criar um novo nó e atribuir um valor a ele. O ponteiro do novo nó aponta para o nó cabeça e o ponteiro do nó cabeça aponta para o novo nó.
 
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4_resolvido.md"> Resolução TP4 </a>
-  
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/lista/AtividadeFixacao.pdf"> *Atividade Fixação Ponteiro*</a> 
+```c
+struct Node* novo = (struct Node*)malloc(sizeof(struct Node));
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-notacaoBigO">Aula 5. Notação Big(O) </a>
-- Notação Big(O)
-- Complexidade de Algoritmos
+novo->valor = 10;
+novo->proximo = inicio;
+inicio = novo;
+```
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-notacaoBigO/atividade-fixacao-bigO.md"> *Atividade Fixação Complexidade de Algoritmos*</a> 
+### Remoção
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-struct">Aula 6. Struct em C</a>
+A operação de remoção remove um nó da lista. O nó a ser removido é o primeiro nó da lista. O ponteiro do nó cabeça aponta para o próximo nó da lista e o nó a ser removido é liberado da memória.
 
-- Estrutura 
-- Tipo de Dados Complexos
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
+![Remoção](imagens/remocao.png)
+
+Para remover um nó de uma lista ligada, é necessário criar um ponteiro temporário para armazenar o nó a ser removido. O ponteiro do nó cabeça aponta para o próximo nó da lista e o nó a ser removido é liberado da memória.
+
+```c
+struct Node* temp = inicio;
+inicio = inicio->proximo;
+free(temp);
+```
+
+### Busca
+
+A operação de busca procura um nó na lista. A busca é feita percorrendo a lista a partir do nó cabeça até o nó cauda. Se o nó for encontrado, a busca retorna verdadeiro; caso contrário, a busca retorna falso.
+
+```c
+int busca(int valor) {
+    struct Node* temp = inicio;
+    while (temp != NULL) {
+        if (temp->valor == valor) {
+            return 1;
+        }
+        temp = temp->proximo;
+    }
+    return 0;
+}
+```
+
+### Impressão
+
+A operação de impressão imprime os elementos da lista. A impressão é feita percorrendo a lista a partir do nó cabeça até o nó cauda.
+
+```c
+void imprime() {
+    struct Node* temp = inicio;
+    while (temp != NULL) {
+        printf("%d ", temp->valor);
+        temp = temp->proximo;
+    }
+    printf("\n");
+}
+```
+
+### Tamanho
+
+A operação de tamanho retorna o número de elementos da lista. O tamanho é calculado percorrendo a lista a partir do nó cabeça até o nó cauda.
+
+```c
+int tamanho() {
+    int tam = 0;
+    struct Node* temp = inicio;
+    while (temp != NULL) {
+        tam++;
+        temp = temp->proximo;
+    }
+    return tam;
+}
+```
+
+### Vazia
+
+A operação de vazia verifica se a lista está vazia. A verificação é feita comparando o nó cabeça com um valor nulo.
+
+```c
+int vazia() {
+    return inicio == NULL;
+}
+```
+A função acima retorna 1 se a lista estiver vazia e 0 caso contrário.
+
+## Exemplo
+
+A seguir é mostrado um exemplo de uma lista ligada em C.
+
+```c
+#include <stdio.h>
+
+struct Node {
+    int valor;
+    struct Node* proximo;
+};
+
+struct Node* inicio = NULL;
+
+void insere(int valor) {
+    struct Node* novo = (struct Node*)malloc(sizeof(struct Node));
+    novo->valor = valor;
+    novo->proximo = inicio;
+    inicio = novo;
+}
+
+void remove() {
+    struct Node* temp = inicio;
+    inicio = inicio->proximo;
+    free(temp);
+}
+
+int busca(int valor) {
+    struct Node* temp = inicio;
+    while (temp != NULL) {
+        if (temp->valor == valor) {
+            return 1;
+        }
+        temp = temp->proximo;
+    }
+    return 0;
+}
+
+void imprime() {
+    struct Node* temp = inicio;
+    while (temp != NULL) {
+        printf("%d ", temp->valor);
+        temp = temp->proximo;
+    }
+    printf("\n");
+}
+
+int tamanho() {
+    int tam = 0;
+    struct Node* temp = inicio;
+    while (temp != NULL) {
+        tam++;
+        temp = temp->proximo;
+    }
+    return tam;
+}
+
+int vazia() {
+    return inicio == NULL;
+}
+
+int main() {
+    insere(10);
+    insere(20);
+    insere(30);
+    insere(40);
+    insere(50);
+
+    imprime();
+    printf("Tamanho: %d\n", tamanho());
+
+    remove();
+    remove();
+
+    imprime();
+    printf("Tamanho: %d\n", tamanho());
+
+    printf("Busca: %d\n", busca(20));
+    printf("Busca: %d\n", busca(30));
+
+    return 0;
+}
+```
+
+O programa acima cria uma lista ligada com os valores 10, 20, 30, 40 e 50. Em seguida, imprime os elementos da lista e o tamanho da lista. Depois, remove os dois primeiros elementos da lista e imprime os elementos da lista e o tamanho da lista. Por fim, verifica se os valores 20 e 30 estão na lista.
+
+## Referências
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
+
+- [GeeksforGeeks](https://www.geeksforgeeks.org/data-structures/linked-list/)
+
+- [Programiz](https://www.programiz.com/dsa/linked-list)
