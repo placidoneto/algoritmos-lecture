@@ -1,93 +1,63 @@
-<div  align="center">
-    <img width="400"
-        alt="Algoritmo Logo"
-        src="https://blog.growthinstitute.com/hs-fs/hubfs/%5BGI%5D%20blog%20post%20images/algorithms_1.png?width=800&name=algorithms_1.png"
-      />
-    <h1> Algoritmos </h1>
-</div>
+# Projeto de Algoritmos 2o Bimestre 
 
-## Objetivo
+## Objetivo do Projeto:
 
-Este repositório é destinado ao aprendizado dos conceitos do Algoritmos.
+- Implementar e comparar diferentes algoritmos de ordenação.
+- Analisar experimentalmente a complexidade temporal dos algoritmos.
+- Visualizar e interpretar os resultados obtidos.
+- Realizar uma análise crítica dos resultados através de um relatório.
 
 
-## Metodologia
+## Algoritmos a serem implementados:
 
-O processo de aquisição dos conhecimentos deve ser realizado a partir do estudo de cada branch existente neste repositório.
+- **Bubble Sort**: Implementação do algoritmo de ordenação Bubble Sort. Esse algoritmo é um dos mais simples e ineficientes, mas é um bom ponto de partida para a comparação com outros algoritmos.
 
-Cada branch implementada marca um conjunto de conceitos que são aplicados em código e que vai sendo refatorado até aplicação de todo conteúdo visto na disciplina.
-
-## Pré-Requistos 
-
-- Conhecimento em [Programação de Computadores]()
-
-## Agenda
-
-### 1o Bimestre
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture01-introducao"> Conteúdo 1. Fundamentos</a>
-
-- Conceitos Básicos em C
-- Entrada e Saída de Dados
-- Leitura e Escrita de Dados
-- Compilação e Execução de Programas em C
-- Variáveis e Tipos de Dados
-- Expressões Aritméticas
-- Estruturas de Controle de Fluxo
-- Funções
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture01-introducao/lista1.md"> TP1 - *Trabalho Prático 1*</a>
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture02-controle-fluxo">Conteúdo 2. Estruturas de Controle em C</a>
-
-- IF
-- ELSE
-- SWITCH
-- WHILE
-- DO WHILE
-- FOR
-- BREAK
-- CONTINUE
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture02-controle-fluxo/lecture02/tp2.md"> TP2 - *Trabalho Prático 2*</a>
+- **Insertion Sort**: Implementação do algoritmo de ordenação Insertion Sort. Esse algoritmo é um pouco mais eficiente que o Bubble Sort, mas ainda é considerado ineficiente para grandes conjuntos de dados. Eficiente para conjuntos de dados pequenos.
   
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture03-array-e-string">Conteúdo 3. Array e String em C</a>
+- **Selection Sort**: Implementação do algoritmo de ordenação Selection Sort. Esse algoritmo é um pouco mais eficiente que o Bubble Sort, mas ainda é considerado ineficiente para grandes conjuntos de dados. 
 
-- Array
-- String
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture03-array-e-string/lecture03/tp3.md"> TP3 - *Trabalho Prático 3*</a>
+- **Merge Sort**: Implementação do algoritmo de ordenação Merge Sort. Esse algoritmo é um dos mais eficientes algoritmos de ordenação, sendo muito utilizado em aplicações reais. Esse algoritmo é do tipo dividir para conquistar.
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture04-matriz-funcoes-recursividade">Conteúdo 4. Matrizes, Funções, Recursividade e Ponteiros</a>
+- **Quick Sort**: Implementação do algoritmo de ordenação Quick Sort. Esse algoritmo é um dos mais eficientes algoritmos de ordenação. Esse algorítmo também utiliza a técnica de dividir para conquistar. 
 
-- Matrizes
-- Funções
-- Recursividade
-- Ponteiros
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4.md"> TP4 - *Trabalho Prático 4*</a>
+## Metodologia:
 
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/tp4_resolvido.md"> Resolução TP4 </a>
+1. **Implementação**: Implementar os algoritmos de ordenação em 2 linguagens de programação, sendo 1 em C e a outra linguagem pode ser (Python ou Java).
+   
+2. **Geração de Dados**: Gerar conjuntos de dados aleatórios para testar os algoritmos de ordenação. Os conjuntos de dados devem ser gerados de forma aleatória e devem ser ordenados em ordem crescente. Os conjuntos de dados devem devem ter os seguintes tamanhos: 100, 1,000, 10,000, 100,000, 1,000,000.
+
+3. **Medição do tempo de execução (em minutos/segundos)**: Medir o tempo de execução dos algoritmos de ordenação para cada conjunto de dados gerado. O tempo de execução deve ser medido em minutos ou segundos. Para medir o tempo de execução dos algoritmos, utilize a função clock() da biblioteca time.h em C e a função time() da biblioteca time em Python.
+    
+4. **Repetição dos testes**: Repetir os testes 4 vezes para cada conjunto de dados e calcular a média do tempo de execução dos algoritmos.
+
+5. **Visualização**: Plotar gráficos comparando o tempo de execução dos diferentes algoritmos em função do tamanho da entrada. Visualizar os resultados obtidos através de gráficos. É possível utilizar a biblioteca matplotlib para gerar os gráficos.
+
+6. **Análise Crítica**: Realizar uma análise crítica dos resultados obtidos. Comparar os diferentes algoritmos de ordenação e discutir os resultados obtidos. Qual algoritmo é mais eficiente? Qual algoritmo é menos eficiente? Qual a complexidade dos algoritmos? Qual algoritmo é mais eficiente para conjuntos de dados pequenos? Qual algoritmo é mais eficiente para conjuntos de dados grandes? Qual algoritmo é mais eficiente para conjuntos de dados aleatórios? Qual algoritmo é mais eficiente para conjuntos de dados ordenados? Qual algoritmo é mais eficiente considerando as linguagens?
+
+
+## Entrega:
+
+- **Data de Entrega**: 
+  - Entrega 1 (2 algorítmos implementados): **?**/**01**/2025
+  - Entrega 2 (2 algorítmos implementados): **?**/**02**/2025
+  - Entrega Final (Todo o projeto): **?**/**02**/2025
+- **Formato de Entrega**: O projeto deve ser entregue em um repositório no GitHub/GitClassroom. O repositório deve conter o código fonte dos algoritmos implementados, os conjuntos de dados gerados, os resultados obtidos, os gráficos gerados e o relatório em PDF. O relatório deve conter a descrição dos algoritmos, a metodologia utilizada, os resultados obtidos, os gráficos gerados e a análise crítica dos resultados. O relatório deve ser escrito em formato de artigo científico e deve conter no mínimo 5 páginas e no máximo 10 páginas. O relatório deve ser escrito em português e deve seguir as normas da ABNT. O relatório deve ser entregue em formato PDF.
   
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture04-matriz-funcoes-recursividade/lista/AtividadeFixacao.pdf"> *Atividade Fixação Ponteiro*</a> 
+- **O que deve conter no relatório**: 
+  - Capa
+  - Resumo
+  - Sumário
+  - Introdução aos algoritmos de ordenação.
+  - Descrição da implementação de cada algoritmo
+  - Metodologia utilizada para os experimentos
+  - Apresentação dos resultados em forma de tabelas e gráficos
+  - Análise e discussão dos resultados.
+  - Conclusões sobre a performance dos algoritmos e a importância da análise de algoritmos.
+  - Referências Bibliográficas
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-notacaoBigO">Conteúdo 5. Notação Big(O) </a>
-- Notação Big(O)
-- Complexidade de Algoritmos
+## Benefícios do Projeto:
 
-<a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-notacaoBigO/atividade-fixacao-bigO.md"> *Atividade Fixação Complexidade de Algoritmos*</a> 
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lecture-struct">Conteúdo 6. Struct em C</a>
-
-- Estrutura 
-- Tipo de Dados Complexos
-- <a href="https://github.com/placidoneto/algoritmos-lecture/blob/lecture-struct/atividade_fixacao.md"> *Atividade Fixação Struct*</a> 
-
-### 2o Bimestre
-
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/projeto-2o-bimestre">Projeto 2o Bimestre</a>
-
-<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lista-ligada">Conteúdo 7. Lista Ligada</a>
-
-- Lista Ligada
-- Operações de Lista Ligada
-- Implementação de Lista Ligada
+- **Aprendizado prático**: Cada dupla irá consolidar os conhecimentos teóricos sobre algoritmos e estruturas de dados.
+- **Desenvolvimento de habilidades**: Cada dupla irá desenvolver habilidades de programação, análise de dados e visualização de resultados.
+- **Trabalho em equipe**: Cada dupla irá trabalhar em equipe para implementar os algoritmos e analisar os resultados.
+- **Pensamento crítico**: O projeto dará a oportunidade de cada dupla desenvolver o pensamento crítico e analítico sobre os algoritmos de ordenação e suas aplicações práticas.
