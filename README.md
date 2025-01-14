@@ -38,9 +38,11 @@
 ## Entrega:
 
 - **Data de Entrega**: 
-  - Entrega 1 (2 algorítmos implementados): **?**/**01**/2025
-  - Entrega 2 (2 algorítmos implementados): **?**/**02**/2025
-  - Entrega Final (Todo o projeto): **?**/**02**/2025
+  - Entrega 1 (2 algorítmos implementados): **30**/**01**/2025 (quinta-feira)
+  - Entrega 2 (2 algorítmos implementados): **11**/**02**/2025 (terça-feira)
+  - Entrega Final (Todo o projeto): **25**/**02**/2025 (terça-feira)
+- **Link para o repositório do projeto**: [https://classroom.github.com/a/uIEQi_rV](https://classroom.github.com/a/uIEQi_rV)
+  - Nome do repositório: `projeto-algoritmos-ordenacao_nomeSobrenome1_nomeSobrenome2`
 - **Formato de Entrega**: O projeto deve ser entregue em um repositório no GitHub/GitClassroom. O repositório deve conter o código fonte dos algoritmos implementados, os conjuntos de dados gerados, os resultados obtidos, os gráficos gerados e o relatório em PDF. O relatório deve conter a descrição dos algoritmos, a metodologia utilizada, os resultados obtidos, os gráficos gerados e a análise crítica dos resultados. O relatório deve ser escrito em formato de artigo científico e deve conter no mínimo 5 páginas e no máximo 10 páginas. O relatório deve ser escrito em português e deve seguir as normas da ABNT. O relatório deve ser entregue em formato PDF.
   
 - **O que deve conter no relatório**: 
