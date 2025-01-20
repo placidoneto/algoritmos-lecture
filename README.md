@@ -91,6 +91,8 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 - Lista Ligada
 - Operações de Lista Ligada
 - Implementação de Lista Ligada
+
+
 <a href="https://github.com/placidoneto/algoritmos-lecture/tree/lista-ligada-2">Conteúdo 8. Operações em Lista Ligada</a>
 
 - Operações de Lista Ligada
