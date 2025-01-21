@@ -263,6 +263,8 @@ Implemente um programa simples que simule filas de atendimento em um consultorio
 
 Atualize a estrutura do nó para incluir um campo para o tipo de paciente. O campo tipo de paciente deve ser um inteiro que indica se o paciente é normal ou preferencial. O campo tipo de paciente deve ser 0 para pacientes normais e 1 para pacientes preferenciais. Atualize as operações de adicionar um elemento e remover um elemento para incluir o campo tipo de paciente. Atualize a operação de imprimir a lista para imprimir o tipo de paciente. Atualize a operação de calcular o tamanho da lista para calcular o número de pacientes normais e preferenciais. Atualize o programa principal para incluir a opção de adicionar pacientes normais e preferenciais na fila.
 
+- Link para o código base em C da aula: [Link lista-ligada.c](exemplo-lista-ligada/lista-ligada.c)
+- Link para o assitente do desafio: [Link github classromm](https://classroom.github.com/a/YkUZjsdJ)
 
 ## Referências
 
