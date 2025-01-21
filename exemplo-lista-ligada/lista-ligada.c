@@ -5,11 +5,27 @@ struct Node
 {
     /* data */
     struct Node *proximo;
-    int valor;
+    struct Paciente paciente;
 };
 
 
-struct Node *inicio_da_lista;
+struct Paciente
+{
+    /* data */
+    char nome[100];
+    int tipo;
+};
+
+struct Medico
+{
+    /* data */
+    char nome[100];
+    int total_pacientes_atendidos;
+    struct Node *inicio_da_fila;
+};
+
+
+
 
 
 void criar_lista()
@@ -99,6 +115,8 @@ void remover_final()
 void imprimir_lista()
 {
     struct Node *atual = inicio_da_lista;
+
+    printf(" INICIO --> ");
     while (atual != NULL)
     {
         printf("%d --> ", atual->valor);
