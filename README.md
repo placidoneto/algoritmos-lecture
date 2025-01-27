@@ -1,71 +1,77 @@
-# Lista Ligada - Detalhando as operações em Código
+# Lista Duplamente Ligada
+
 
 ## Introdução
 
-Uma lista ligada é uma estrutura de dados linear que consiste em uma sequência de elementos, chamados de nós, onde cada nó armazena um valor e uma referência para o próximo nó da sequência. A lista ligada é uma estrutura de dados dinâmica, ou seja, ela pode crescer ou diminuir de tamanho durante a execução do programa.
+Uma lista duplamente ligada é uma estrutura de dados linear que consiste em uma sequência de elementos, 
+chamados de `Node`, onde cada nó armazena um valor e duas referências, uma para o próximo nó da sequência e 
+outra para o nó anterior da sequência. A lista duplamente ligada é uma estrutura de dados dinâmica, ou seja, 
+ela pode crescer ou diminuir de tamanho durante a execução do programa.
+
 
 ## Estrutura
 
-A lista ligada é composta por nós, onde cada nó possui dois campos: um campo para armazenar o valor do nó e um campo para armazenar a referência para o próximo nó da sequência. A referência para o próximo nó é chamada de ponteiro.
+A lista duplamente ligada é composta por nós, onde cada nó contém um valor e duas referências, uma para o próximo nó e outra para o nó anterior. 
 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node
-{
-    /* data */
-    struct Node *proximo;
-    int valor;
+struct Node {
+    int data;
+    struct Node* proximo;
+    struct Node* anterior;
 };
 
-struct Node *inicio_da_lista;
-```
+struct Node* inicio_da_lista = NULL;
 
-Iremos considerar 7 operações possíveis em uma lista ligada, como mostra o código abaixo que implementa essas operações.
-
-```c
-void imprimir_menu()
+void criar_lista()
 {
-    printf("1. Adicionar elemento\n");
-    printf("2. Adicionar elemento no final\n");
-    printf("3. Remover elemento\n");
-    printf("4. Remover elemento no final\n");
-    printf("5. Remover elemento no inicio\n");
-    printf("6. Imprimir lista\n");
-    printf("7. Tamanho da lista\n");
-    printf("8. Sair\n");
+    inicio_da_lista = NULL;
 }
 ```
 
-### Adicionar elemento
+## Inserção
 
-A operação de adicionar um elemento em uma lista ligada consiste em criar um novo nó e inserir esse nó no início da lista. Para isso, é necessário criar um novo nó, atribuir o valor ao campo `valor` do nó e atribuir a referência para o próximo nó da lista ao campo `proximo` do nó.
+A inserção de um novo nó em uma lista duplamente ligada pode ser feita no início, no final ou em qualquer posição da lista.
+
+### Inserção no início
+
+Para inserir um novo nó no início da lista, basta criar um novo nó, atribuir o valor desejado a ele e ajustar as referências do novo nó e do nó que era o primeiro da lista.
 
 ```c
 void adicionar_elemento(int valor)
 {
     struct Node *novo_node = (struct Node *)malloc(sizeof(struct Node));
-    novo_node->valor = valor;
+    novo_node->data = valor;
     novo_node->proximo = inicio_da_lista;
+    novo_node->anterior = NULL;
+    if (inicio_da_lista != NULL)
+    {
+        inicio_da_lista->anterior = novo_node;
+    }
     inicio_da_lista = novo_node;
 }
 ```
 
-Perceba que a operação de adicionar um elemento em uma lista ligada é uma operação de complexidade O(1), ou seja, a operação é executada em tempo constante. Outra observação importante é que a operação de adicionar um elemento em uma lista ligada é uma operação de inserção no início da lista. Dessa forma, a ordem dos elementos na lista é inversa à ordem de inserção. As definições de valor e próximo são feitas de maneira direta, pois o valor é o argumento da função, enquanto o próximo é o inicio da lista. Por fim, o inicio da lista é atualizado para o novo nó.
+Perceba que, ao adicionar um novo nó no início da lista, é necessário verificar se a lista está vazia. Caso a lista esteja vazia, o novo nó será o primeiro e o último da lista.
+Como o novo nó é o primeiro da lista, a referência `anterior` dele deve ser `NULL`. Além disso, a referência `anterior` do nó que era o primeiro da lista deve apontar para o novo nó. 
+O novo nó passa a ser o primeiro da lista.
 
-### Adicionar elemento no final
+### Inserção no final
 
-A operação de adicionar um elemento no final de uma lista ligada consiste em criar um novo nó e inserir esse nó no final da lista. Para isso, é necessário percorrer a lista até o último nó e inserir o novo nó após o último nó.
+Para inserir um novo nó no final da lista, basta criar um novo nó, atribuir o valor desejado a ele e percorrer a lista até encontrar o último nó.
 
 ```c
+
 void adicionar_final(int valor)
 {
     struct Node *novo_node = (struct Node *)malloc(sizeof(struct Node));
-    novo_node->valor = valor;
+    novo_node->data = valor;
     novo_node->proximo = NULL;
     if (inicio_da_lista == NULL)
     {
+        novo_node->anterior = NULL;
         inicio_da_lista = novo_node;
     }
     else
@@ -76,49 +82,49 @@ void adicionar_final(int valor)
             atual = atual->proximo;
         }
         atual->proximo = novo_node;
+        novo_node->anterior = atual;
     }
 }
 ```
 
-Perceba que a operação de adicionar um elemento no final de uma lista ligada é uma operação de complexidade O(n), onde n é o número de elementos na lista. Isso ocorre porque é necessário percorrer a lista até o último nó para inserir o novo nó. A definição do valor é feita de maneira direta, pois o valor é o argumento da função. O próximo é NULL, pois o novo nó será o último nó da lista. Se a lista estiver vazia, o novo nó será o primeiro nó da lista. Caso contrário, é necessário percorrer a lista até o último nó e inserir o novo nó após o último nó.
+Perceba que, ao adicionar um novo nó no final da lista, é necessário verificar se a lista está vazia. Caso a lista esteja vazia, o novo nó será o primeiro e o último da lista.
+Caso a lista não esteja vazia, é necessário percorrer a lista até encontrar o último nó. O último nó é aquele cuja referência `proximo` é `NULL`.
+O novo nó passa a ser o último da lista.
 
-### Remover elemento
+### Remoção
 
-A operação de remover um elemento de uma lista ligada consiste em percorrer a lista até o nó que contém o valor a ser removido e remover esse nó da lista. Para isso, é necessário percorrer a lista até o nó anterior ao nó que contém o valor a ser removido e atualizar a referência para o próximo nó.
+
+A remoção de um nó de uma lista duplamente ligada pode ser feita no início, no final ou em qualquer posição da lista.
+
+### Remoção no início
+
+Para remover o primeiro nó da lista, basta ajustar as referências do nó que era o segundo da lista e do nó que era o primeiro da lista.
 
 ```c
-void remover_elemento(int valor)
+
+void remover_inicio()
 {
-    struct Node *atual = inicio_da_lista;
-    struct Node *anterior = NULL;
-    while (atual != NULL)
+    struct Node *temp = inicio_da_lista;
+    if (inicio_da_lista == NULL)
     {
-        if (atual->valor == valor)
-        {
-            if (anterior == NULL)
-            {
-                remover_inicio();
-            }
-            else
-            {
-                anterior->proximo = atual->proximo;
-                free(atual);
-            }
-            return;
-        }
-        anterior = atual;
-        atual = atual->proximo;
+        return;
     }
+    inicio_da_lista = inicio_da_lista->proximo;
+    inicio_da_lista->anterior = NULL;
+    free(temp);
 }
 ```
 
-Perceba que a operação de remover um elemento de uma lista ligada é uma operação de complexidade O(n), onde n é o número de elementos na lista. Isso ocorre porque é necessário percorrer a lista até o nó que contém o valor a ser removido. A definição do valor é feita de maneira direta, pois o valor é o argumento da função. A remoção do nó é feita de maneira direta, pois é necessário apenas atualizar a referência para o próximo nó e liberar a memória alocada para o nó a ser removido.
+Perceba que, ao remover o primeiro nó da lista, é necessário verificar se a lista está vazia. Caso a lista esteja vazia, não é possível remover o primeiro nó.
+Caso a lista não esteja vazia, o segundo nó da lista passa a ser o primeiro. Além disso, a referência `anterior` do novo primeiro nó deve ser `NULL`.
 
-### Remover elemento no final
+### Remoção no final
 
-A operação de remover um elemento no final de uma lista ligada consiste em percorrer a lista até o penúltimo nó e remover o último nó da lista. Para isso, é necessário percorrer a lista até o penúltimo nó e atualizar a referência para o próximo nó.
+
+Para remover o último nó da lista, basta percorrer a lista até encontrar o penúltimo nó e ajustar a referência `proximo` dele.
 
 ```c
+
 void remover_final()
 {
     struct Node *atual = inicio_da_lista;
@@ -138,50 +144,61 @@ void remover_final()
     }
     free(atual);
 }
-
 ```
 
-Perceba que a operação de remover um elemento no final de uma lista ligada é uma operação de complexidade O(n), onde n é o número de elementos na lista. Isso ocorre porque é necessário percorrer a lista até o penúltimo nó para remover o último nó da lista. A remoção do nó é feita de maneira direta, pois é necessário apenas atualizar a referência para o próximo nó e liberar a memória alocada para o nó a ser removido.
+Perceba que, ao remover o último nó da lista, é necessário verificar se a lista está vazia. Caso a lista esteja vazia, não é possível remover o último nó.
+Caso a lista não esteja vazia, é necessário percorrer a lista até encontrar o penúltimo nó. O penúltimo nó é aquele cuja referência `proximo` é o último nó.
 
-### Remover elemento no início
+### Remoção em qualquer posição
 
-A operação de remover um elemento no início de uma lista ligada consiste em remover o primeiro nó da lista. Para isso, é necessário atualizar o início da lista para o próximo nó e liberar a memória alocada para o primeiro nó.
+Para remover um nó de qualquer posição da lista, basta percorrer a lista até encontrar o nó desejado e ajustar as referências do nó anterior e do nó posterior.
 
 ```c
-void remover_inicio()
+
+void remover_elemento(int valor)
 {
-    struct Node *temp = inicio_da_lista;
-    inicio_da_lista = inicio_da_lista->proximo;
-    free(temp);
+    struct Node *atual = inicio_da_lista;
+    struct Node *anterior = NULL;
+    while (atual != NULL)
+    {
+        if (atual->data == valor)
+        {
+            if (anterior == NULL)
+            {
+                remover_inicio();
+            }
+            else
+            {
+                anterior->proximo = atual->proximo;
+                free(atual);
+            }
+            return;
+        }
+        anterior = atual;
+        atual = atual->proximo;
+    }
 }
-``` 
+```
 
-Perceba que a operação de remover um elemento no início de uma lista ligada é uma operação de complexidade O(1), ou seja, a operação é executada em tempo constante. A remoção do nó é feita de maneira direta, pois é necessário apenas atualizar o início da lista para o próximo nó e liberar a memória alocada para o primeiro nó.
+Perceba que, ao remover um nó de qualquer posição da lista, é necessário percorrer a lista até encontrar o nó desejado. Caso o nó desejado seja o primeiro da lista, a função `remover_inicio` é chamada.
 
-### Imprimir lista
-
-A operação de imprimir uma lista ligada consiste em percorrer a lista e imprimir o valor de cada nó.
+As funções de tamanho e impressão da lista são implementadas de maneira semelhante à lista simplesmente ligada.
 
 ```c
+
 void imprimir_lista()
 {
     struct Node *atual = inicio_da_lista;
+
+    printf(" INICIO --> ");
     while (atual != NULL)
     {
-        printf("%d --> ", atual->valor);
+        printf("%d --> ", atual->data);
         atual = atual->proximo;
     }
     printf(" NULL\n");
 }
-```
 
-Perceba que a operação de imprimir uma lista ligada é uma operação de complexidade O(n), onde n é o número de elementos na lista. Isso ocorre porque é necessário percorrer a lista para imprimir o valor de cada nó. A impressão do valor é feita de maneira direta, pois é necessário apenas acessar o campo `valor` do nó. Por fim é impresso NULL para indicar o final da lista.
-
-### Tamanho da lista
-
-A operação de calcular o tamanho de uma lista ligada consiste em percorrer a lista e contar o número de nós.
-
-```c
 int tamanho_da_lista()
 {
     struct Node *atual = inicio_da_lista;
@@ -193,39 +210,49 @@ int tamanho_da_lista()
     }
     return tamanho;
 }
+
+void imprimir_menu()
+{
+    printf("1. Adicionar elemento\n");
+    printf("2. Adicionar elemento no final\n");
+    printf("3. Remover elemento\n");
+    printf("4. Remover elemento no final\n");
+    printf("5. Remover elemento no inicio\n");
+    printf("6. Imprimir lista\n");
+    printf("7. Tamanho da lista\n");
+    printf("8. Sair\n");
+}
+
 ```
 
-Perceba que a operação de calcular o tamanho de uma lista ligada é uma operação de complexidade O(n), onde n é o número de elementos na lista. Isso ocorre porque é necessário percorrer a lista para contar o número de nós. O incremento do tamanho é feito de maneira direta, pois é necessário apenas incrementar uma variável. Por fim, é retornado o tamanho da lista.
-
-### Programa principal
-
-O programa principal é responsável por criar a lista ligada e chamar as operações de acordo com a escolha do usuário.
+O programa principal é implementado da seguinte maneira:
 
 ```c
+
 int main()
 {
     criar_lista();
     int opcao;
     int valor;
-    while (1)
+    do
     {
         imprimir_menu();
-        printf("Digite a opcao: ");
+        printf("Digite a opcao desejada: ");
         scanf("%d", &opcao);
         switch (opcao)
         {
         case 1:
-            printf("Digite o valor: ");
+            printf("Digite o valor a ser adicionado: ");
             scanf("%d", &valor);
             adicionar_elemento(valor);
             break;
         case 2:
-            printf("Digite o valor: ");
+            printf("Digite o valor a ser adicionado: ");
             scanf("%d", &valor);
             adicionar_final(valor);
             break;
         case 3:
-            printf("Digite o valor: ");
+            printf("Digite o valor a ser removido: ");
             scanf("%d", &valor);
             remover_elemento(valor);
             break;
@@ -242,34 +269,32 @@ int main()
             printf("Tamanho da lista: %d\n", tamanho_da_lista());
             break;
         case 8:
-            return 0;
+            printf("Saindo...\n");
+            break;
         default:
             printf("Opcao invalida\n");
+            break;
         }
-    }
+    } while (opcao != 8);
     return 0;
 }
-```
 
-Perceba que o programa principal é um loop infinito que exibe o menu de opções, lê a opção escolhida pelo usuário e chama a operação correspondente. O loop é interrompido quando o usuário escolhe a opção de sair. O programa principal é responsável por criar a lista ligada e chamar as operações de acordo com a escolha do usuário.
+```
 
 ## Conclusão
 
-Nesta aula, detalhamos as operações de uma lista ligada e implementamos essas operações em código. A lista ligada é uma estrutura de dados linear que consiste em uma sequência de elementos, chamados de nós, onde cada nó armazena um valor e uma referência para o próximo nó da sequência. As operações de uma lista ligada incluem adicionar um elemento, adicionar um elemento no final, remover um elemento, remover um elemento no final, remover um elemento no início, imprimir a lista e calcular o tamanho da lista. Cada operação foi detalhada e implementada em código. Por fim, o programa principal foi implementado para criar a lista ligada e chamar as operações de acordo com a escolha do usuário.
+Nesta aula, aprendemos a implementar uma lista duplamente ligada em C. A lista duplamente ligada é uma estrutura de dados linear que permite a inserção e remoção de elementos em qualquer posição da lista. A lista duplamente ligada é uma estrutura de dados dinâmica, ou seja, ela pode crescer ou diminuir de tamanho durante a execução do programa.
 
-## Desafio
-
-Implemente um programa simples que simule filas de atendimento em um consultorio médico. O programa deve permitir adicionar pacientes na fila, remover pacientes da fila e imprimir a fila de pacientes. As filas de pacientes são organizadas em ordem de chegada, ou seja, o primeiro paciente a chegar é o primeiro a ser atendido. As filas são organizadas por médico. Cada médico tem uma fila de pacientes. O programa deve permitir gerenciar ps pacientes em uma fila de um médico. Uma restrição do programa é que cada médico pode atender no máximo 15 pacientes por dia, sejam eles normais ou pacientes preferenciais. A cada 2 pacientes preferenciais, 1 paciente normal é atendido. O programa deve permitir adicionar pacientes normais e preferenciais na mesma fila do médico.
-
-Atualize a estrutura do nó para incluir um campo para o tipo de paciente. O campo tipo de paciente deve ser um inteiro que indica se o paciente é normal ou preferencial. O campo tipo de paciente deve ser 0 para pacientes normais e 1 para pacientes preferenciais. Atualize as operações de adicionar um elemento e remover um elemento para incluir o campo tipo de paciente. Atualize a operação de imprimir a lista para imprimir o tipo de paciente. Atualize a operação de calcular o tamanho da lista para calcular o número de pacientes normais e preferenciais. Atualize o programa principal para incluir a opção de adicionar pacientes normais e preferenciais na fila.
-
-- Link para o código base em C da aula: [Link lista-ligada.c](exemplo-lista-ligada/lista-ligada.c)
-- Link para o assitente do desafio: [Link github classromm](https://classroom.github.com/a/YkUZjsdJ)
 
 ## Referências
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
+- [Lista duplamente ligada](https://pt.wikipedia.org/wiki/Lista_duplamente_ligada)
 
-- [GeeksforGeeks](https://www.geeksforgeeks.org/data-structures/linked-list/)
+- [Lista duplamente ligada em C](https://www.geeksforgeeks.org/doubly-linked-list/)
 
-- [Programiz](https://www.programiz.com/dsa/linked-list)
+- [Lista duplamente ligada em C](https://www.tutorialspoint.com/data_structures_algorithms/doubly_linked_list_algorithm.htm)
+
+- [Lista duplamente ligada em C](https://www.programiz.com/dsa/doubly-linked-list)
+
+
+

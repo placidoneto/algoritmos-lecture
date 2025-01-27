@@ -1,53 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node
-{ 
-    /* data */
-    struct Node *proximo;
-    struct Paciente paciente;
+struct Node {
+    int data;
+    struct Node* proximo;
+    struct Node* anterior;
 };
 
-
-struct Paciente
-{
-    /* data */
-    char nome[100];
-    int tipo;
-};
-
-struct Medico
-{
-    /* data */
-    char nome[100];
-    int total_pacientes_atendidos;
-    struct Node *inicio_da_fila;
-}; 
-
-
-
-
+struct Node* inicio_da_lista = NULL;
 
 void criar_lista()
 {
     inicio_da_lista = NULL;
 }
 
+
 void adicionar_elemento(int valor)
 {
     struct Node *novo_node = (struct Node *)malloc(sizeof(struct Node));
-    novo_node->valor = valor;
+    novo_node->data = valor;
     novo_node->proximo = inicio_da_lista;
+    novo_node->anterior = NULL;
+    if (inicio_da_lista != NULL)
+    {
+        inicio_da_lista->anterior = novo_node;
+    }
     inicio_da_lista = novo_node;
 }
 
 void adicionar_final(int valor)
 {
     struct Node *novo_node = (struct Node *)malloc(sizeof(struct Node));
-    novo_node->valor = valor;
+    novo_node->data = valor;
     novo_node->proximo = NULL;
     if (inicio_da_lista == NULL)
     {
+        novo_node->anterior = NULL;
         inicio_da_lista = novo_node;
     }
     else
@@ -58,6 +46,7 @@ void adicionar_final(int valor)
             atual = atual->proximo;
         }
         atual->proximo = novo_node;
+        novo_node->anterior = atual;
     }
 }
 
@@ -65,6 +54,7 @@ void remover_inicio()
 {
     struct Node *temp = inicio_da_lista;
     inicio_da_lista = inicio_da_lista->proximo;
+    inicio_da_lista->anterior = NULL;
     free(temp);
 }
 
@@ -74,7 +64,7 @@ void remover_elemento(int valor)
     struct Node *anterior = NULL;
     while (atual != NULL)
     {
-        if (atual->valor == valor)
+        if (atual->data == valor)
         {
             if (anterior == NULL)
             {
@@ -119,11 +109,12 @@ void imprimir_lista()
     printf(" INICIO --> ");
     while (atual != NULL)
     {
-        printf("%d --> ", atual->valor);
+        printf("%d --> ", atual->data);
         atual = atual->proximo;
     }
     printf(" NULL\n");
 }
+
 
 int tamanho_da_lista()
 {
@@ -154,25 +145,25 @@ int main()
     criar_lista();
     int opcao;
     int valor;
-    while (1)
+    do
     {
         imprimir_menu();
-        printf("Digite a opcao: ");
+        printf("Digite a opcao desejada: ");
         scanf("%d", &opcao);
         switch (opcao)
         {
         case 1:
-            printf("Digite o valor: ");
+            printf("Digite o valor a ser adicionado: ");
             scanf("%d", &valor);
             adicionar_elemento(valor);
             break;
         case 2:
-            printf("Digite o valor: ");
+            printf("Digite o valor a ser adicionado: ");
             scanf("%d", &valor);
             adicionar_final(valor);
             break;
         case 3:
-            printf("Digite o valor: ");
+            printf("Digite o valor a ser removido: ");
             scanf("%d", &valor);
             remover_elemento(valor);
             break;
@@ -189,10 +180,13 @@ int main()
             printf("Tamanho da lista: %d\n", tamanho_da_lista());
             break;
         case 8:
-            return 0;
+            printf("Saindo...\n");
+            break;
         default:
             printf("Opcao invalida\n");
+            break;
         }
-    }
+    } while (opcao != 8);
     return 0;
 }
+
