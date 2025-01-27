@@ -98,3 +98,8 @@ Cada branch implementada marca um conjunto de conceitos que são aplicados em c�
 - Operações de Lista Ligada
 - Implementação das operações
 - Desafio
+
+<a href="https://github.com/placidoneto/algoritmos-lecture/tree/lista-duplamente-ligada">Conteúdo 9. Lista Duplamente Ligada</a>
+
+- Operações de Lista Duplamente Ligada
+- Implementação das operações
