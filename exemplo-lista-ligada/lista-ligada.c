@@ -7,7 +7,7 @@ struct Node
     struct Node *proximo;
     struct Paciente paciente;
 };
-
+ 
 
 struct Paciente
 {
